@@ -29,7 +29,7 @@
                  
                  <!-- display the top level navigation for items that don’t have a submenu -->
                      
-                         <li class="nav-item active">
+                         <li class="nav-item">
                      
                      <a class="nav-link" href="/">Specification</a>
                  
@@ -102,132 +102,7 @@
   </header>
 
   <div class="container theme-showcase" role="main">
-    <h1 id="specification-for-archival-information-packages">Specification for Archival Information Packages</h1>
-
-<h1 id="preface">Preface</h1>
-<h2 id="i-aim-of-the-specification">I. Aim of the Specification</h2>
-<p>This document is one of several related specifications which aim to provide a common set of usage descriptions of international standards for packaging digital information for archiving purposes. These specifications are based on common, international standards for transmitting, describing and preserving digital data. They also utilise the Reference Model for an Open Archival Information System (OAIS), which has Information Packages as its foundation. Familiarity with the core functional entities of OAIS is a prerequisite for understanding the specifications.</p>
-
-<p>The specifications are designed to help data creators, software developers, and digital archives to tackle the challenge of short-, medium- and long-term data management and reuse in a sustainable, authentic, cost-efficient, manageable and interoperable way.
-A visualisation of the current specification network can be seen here:</p>
-
-<p><a name="figi-dip"></a>
-<img src="figs/fig_1_dip.png" alt="OAIS Entities" title="Diagram showing E-ARK specification dependency hierarchy" /></p>
-
-<p><strong>Figure I:</strong> Diagram showing E-ARK specification dependency hierarchy. Note that the image only shows a selection of the published CITS and isn’t an exhaustive list.</p>
-
-<h3 id="overview-of-the-e-ark-specifications">Overview of the E-ARK Specifications</h3>
-
-<h4 id="common-specification-for-information-packages-e-ark-csip">Common Specification for Information Packages (E-ARK CSIP)</h4>
-<p>This document introduces the concept of a Common Specification for Information Packages (CSIP). The main purposes of CSIP are to:</p>
-
-<ul>
-  <li>Establish a common understanding of the requirements which need to be met to achieve interoperability of Information Packages.</li>
-  <li>Establish a common base for the development of more specific Information Package definitions and tools within the digital preservation community.</li>
-  <li>Propose the details of an XML-based implementation of the requirements using, to the largest possible extent, standards which are widely used in international digital preservation.</li>
-</ul>
-
-<p>Ultimately the goal of the Common Specification is to reach a level of interoperability between all Information Packages so that tools implementing the Common Specification can be adopted by institutions without the need for further modifications or adaptations.</p>
-
-<h4 id="specification-for-submission-information-packages-e-ark-sip">Specification for Submission Information Packages (E-ARK SIP)</h4>
-<p>The main aims of this specification are to:</p>
-
-<ul>
-  <li>Define a general structure for a Submission Information Package format suitable for a wide variety of archival scenarios, such as document and image collections, databases or geospatial data.</li>
-  <li>Enhance interoperability between Producers and Archives.</li>
-  <li>Recommend best practices regarding the structure, content and metadata of Submission Information Packages.</li>
-</ul>
-
-<h4 id="specification-for-archival-information-packages-e-ark-aip">Specification for Archival Information Packages (E-ARK AIP)</h4>
-<p>The main aims of this specification are to:</p>
-
-<ul>
-  <li>Define a generic structure of the AIP format suitable for a wide variety of data types, such as document and image collections, archival records, databases or geospatial data.</li>
-  <li>Recommend a set of metadata related to the structural and the preservation aspects of the AIP as implemented by the eArchiving Reference Implementation (earkweb).</li>
-  <li>Ensure the format is suitable to store large quantities of data.</li>
-</ul>
-
-<h4 id="specification-for-dissemination-information-packages-e-ark-dip">Specification for Dissemination Information Packages (E-ARK DIP)</h4>
-<p>The main aims of this specification are to:</p>
-
-<ul>
-  <li>Define a generic structure of the DIP format suitable for a wide variety of archival records, such as document and image collections, databases or geographical data.</li>
-  <li>Recommend a set of metadata related to the structural and access aspects of the DIP.</li>
-</ul>
-
-<h4 id="content-information-type-specifications-e-ark-cits">Content Information Type Specifications (E-ARK CITS)</h4>
-<p>The main aim of a Content Information Type Specification (CITS) is to:</p>
-
-<ul>
-  <li>Define, in technical terms, how data and metadata must be formatted and placed within a CSIP Information Package to achieve interoperability in exchanging specific Content Information.</li>
-</ul>
-
-<p>The number of possible Content Information Type Specifications is unlimited. For a list of existing Content Information Type Specifications see the DILCIS Board webpage (DILCIS Board, <a href="http://dilcis.eu/">http://dilcis.eu/</a>).</p>
-
-<h2 id="ii-organisational-support">II. Organisational Support</h2>
-<p>This specification is maintained by the Digital Information LifeCycle Interoperability Standards Board (DILCIS Board, <a href="http://dilcis.eu/">http://dilcis.eu/</a>). The role of the DILCIS Board is to enhance and maintain the draft specifications developed in the European Archival Records and Knowledge Preservation Project (E-ARK project, <a href="http://eark-project.com/">http://eark-project.com/</a>), which concluded in January 2017. The Board consists of eight members, but no restriction is placed on the number of participants taking part in the work. All Board documents and specifications are stored in GitHub (<a href="https://github.com/DILCISBoard/">https://github.com/DILCISBoard/</a>), while published versions are made available on the Board webpage. The DILCIS Board have been responsible for providing the core specifications to the Connecting Europe Facility eArchiving Building Block <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eArchiving/">https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eArchiving/</a>.</p>
-
-<h2 id="iii-authors--revision-history">III. Authors &amp; Revision History</h2>
-<p>A full list of contributors to this specification, as well as the revision history, can be found in the <a href="#postface">Postface material</a>.</p>
-
-<h1 id="e-ark-archival-information-package-aip">E-ARK Archival Information Package (AIP)</h1>
-
-<h2 id="specification-for-archival-information-packages-1">Specification for Archival Information Packages</h2>
-
-<p>Version: 2.1.0</p>
-
-<p>Date: 15.10.2021</p>
-
-<p>1.  <a href="#scopeandpurpose">Scope and purpose</a><br />
-2.  <a href="#relationtootherdocuments">Relation to other documents</a><br />
-3.  <a href="#introduction">Introduction</a><br />
-4.  <a href="#definitionsandremarks">Definitions and remarks</a><br />
-4.1.  <a href="#logicalandphysicalaip">Logical and physical AIP</a><br />
-4.2.  <a href="#versionofanaip">Version of an AIP</a><br />
-4.3.  <a href="#segmentationoftheaip&lt;aname=&quot;structdiv&quot;&gt;&lt;/a&gt;">Segmentation of the AIP <a name="structdiv"></a></a><br />
-4.4.  <a href="#splitting">Splitting</a><br />
-4.5.  <a href="#differentialaip">Differential AIP</a><br />
-5.  <a href="#aipformat">AIP format</a><br />
-5.1.  <a href="#aipspecificstructuralmetadata">AIP specific structural metadata</a><br />
-5.1.1.  <a href="#compoundvs.dividedpackagestructure">Compound vs. divided package structure</a><br />
-5.1.2.  <a href="#parent-childrelationship">Parent-Child relationship</a><br />
-5.1.3.  <a href="#metsidentifier">METS identifier</a><br />
-5.1.3.1.  <a href="#structuralmapofadividedmetsstructure">Structural map of a divided METS structure</a><br />
-5.1.4.  <a href="#metadatarepresentationoftheaipstructure">Metadata representation of the AIP structure</a><br />
-5.1.4.1.  <a href="#childaipreferencesparentaip">Child AIP references parent AIP</a><br />
-5.1.4.2.  <a href="#parentaipreferenceschildaips">Parent AIP references child AIPs</a><br />
-5.2.  <a href="#aiprelevantpreservationmetadata">AIP relevant preservation metadata</a><br />
-5.2.1.  <a href="#premisobject">PREMIS object</a><br />
-5.2.1.1.  <a href="#fileformat">File format</a><br />
-5.2.1.2.  <a href="#storage">Storage</a><br />
-5.2.1.3.  <a href="#relationship">Relationship</a><br />
-5.2.2.  <a href="#premisevent">PREMIS event</a><br />
-5.2.2.1.  <a href="#eventidentifier">Event identifier</a><br />
-5.2.2.2.  <a href="#linktoagent/object">Link to agent/object</a><br />
-5.2.2.3.  <a href="#migrationeventtype">Migration event type</a><br />
-5.2.3.  <a href="#premisagent">PREMIS agent</a><br />
-5.3.  <a href="#physicalcontainerpackaging">Physical Container Packaging</a><br />
-5.3.1.  <a href="#namingschemeforphysicalcontainers">Naming scheme for physical containers</a><br />
-5.3.1.1.  <a href="#identifierpart">Identifier part</a><br />
-5.3.1.2.  <a href="#versionlabel">Version label</a><br />
-5.3.1.3.  <a href="#baglabel">Bag label</a><br />
-5.3.1.4.  <a href="#differentiallabel">Differential label</a><br />
-5.3.2.  <a href="#packaging">Packaging</a><br />
-5.3.2.1.  <a href="#bagit">BagIt</a><br />
-5.3.2.2.  <a href="#ocfl">OCFL</a><br />
-6.  <a href="#appendices">Appendices</a><br />
-6.1.  <a href="#appendixa-metsreferencingrepresentationmetsfiles">Appendix A - METS referencing representation METS files</a><br />
-6.2.  <a href="#appendixb–metsdescribingarepresentation">Appendix B – METS describing a representation</a><br />
-6.3.  <a href="#appendixc-premis.xmldescribingeventsonpackagelevel">Appendix C - PREMIS.xml describing events on package level</a><br />
-6.4.  <a href="#appendixd-premis.xmldescribingmigrationeventsrepresentationlevel">Appendix D - PREMIS.xml describing migration events (representation level)</a><br />
-6.5.  <a href="#appendixe-namingschemeexamples">Appendix E - Naming scheme examples</a><br />
-6.5.1.  <a href="#migratingarepresentationtoanewversion">Migrating a representation to a new version</a><br />
-6.5.2.  <a href="#migratingarepresentationtoanewversionwithsegmentedpackages">Migrating a representation to a new version with segmented packages</a><br />
-6.5.3.  <a href="#migratingarepresentationusingadifferentialpackage">Migrating a representation using a differential package</a></p>
-
-<p><a name="scopeandpurpose"></a></p>
-
-<h1 id="1-scope-and-purpose">1. Scope and purpose</h1>
+    <h1 id="scope-and-purpose">Scope and purpose</h1>
 
 <p>To briefly recall the three types of information packages as defined by OAIS
 [@OAIS2012], there is the Submission Information Package (SIP) which is used to
@@ -251,9 +126,7 @@ with regard to the use of long-term archiving standards.</li>
 format is suitable for the storage of large quantities of data.</li>
 </ul>
 
-<p><a name="relationtootherdocuments"></a></p>
-
-<h1 id="2-relation-to-other-documents">2. Relation to other documents</h1>
+<h1 id="relation-to-other-documents">Relation to other documents</h1>
 
 <p>This specification document originates from the document “D4.4 Final version of
 SIP-AIP conversion component (Part A: AIP specification)” [@e-ark-d4.4] created
@@ -268,9 +141,7 @@ by the “Common Specification for Information Packages (CSIP) [see
 <p>Further documents which are related to the AIP specification in a general sense
 are listed in the CSIP (section 1.4 “Relation to other documents”).</p>
 
-<p><a name="introduction"></a></p>
-
-<h1 id="3-introduction">3. Introduction</h1>
+<h1 id="introduction">Introduction</h1>
 
 <p>The AIP format defines an information package for storing archival content that
 is going to be transferred to a repository for long-term preservation purposes.
@@ -300,13 +171,9 @@ impose a common storage format that all repository systems need to implement.
 While it can be used as an archival storage format, it can also be seen as a
 format that makes system migration easier.</p>
 
-<p><a name="definitionsandremarks"></a></p>
+<h1 id="definitions-and-remarks">Definitions and remarks</h1>
 
-<h1 id="4-definitions-and-remarks">4. Definitions and remarks</h1>
-
-<p><a name="logicalandphysicalaip"></a></p>
-
-<h2 id="41-logical-and-physical-aip">4.1. Logical and physical AIP</h2>
+<h2 id="logical-and-physical-aip">Logical and physical AIP</h2>
 
 <p><em>Definition:</em> The <em>logical AIP</em> is the set of digital objects and metadata
 representing an entire intellectual entity regardless of the physical manifestation.</p>
@@ -314,9 +181,7 @@ representing an entire intellectual entity regardless of the physical manifestat
 <p><em>Definition:</em> The <em>physical AIP</em> is the manifestation of a logical AIP in form
 of one or several container files.</p>
 
-<p><a name="versionofanaip"></a></p>
-
-<h2 id="42-version-of-an-aip">4.2. Version of an AIP</h2>
+<h2 id="version-of-an-aip">Version of an AIP</h2>
 
 <p>Information packages are permanent: more precisely the information they contain
 is assumed to be permanent and always describes the same unaltered conceptual
@@ -342,9 +207,7 @@ of the AIP.</p>
 in a container may change as well. The result is a new version of the physical
 container files.</p>
 
-<p>&lt;a name=”segmentationoftheaip&lt;aname=”structdiv”&gt;&lt;/a&gt;”&gt;&lt;/a&gt;</p>
-
-<h2 id="43-segmentation-of-the-aip-">4.3. Segmentation of the AIP <a name="structdiv"></a></h2>
+<h2 id="segmentation-of-the-aip-">Segmentation of the AIP <a name="structdiv"></a></h2>
 
 <p>From the point of view of preserving the integrity of the AIP, the ideal case
 is that the logical AIP is packaged as one single physical container, because
@@ -381,9 +244,7 @@ i.e. child packages of the logical AIP, the AIC (header information package) mus
 the references to the child packages. However, it is not required to update the
 reference to a parent of a child package which is not concerned by a preservation action.</p>
 
-<p><a name="splitting"></a></p>
-
-<h2 id="44-splitting">4.4. Splitting</h2>
+<h2 id="splitting">Splitting</h2>
 
 <p><em>Definition:</em> <em>Splitting</em> is a special case of segmentation where large files
 (e.g. large representation content files) are divided into parts of a fixed byte
@@ -391,9 +252,7 @@ length. However, the splitted content files are wrapped by AIP segments, i.e. th
 are contained in an AIP which references the parent information package (AIC)
 to which they belong.</p>
 
-<p><a name="differentialaip"></a></p>
-
-<h2 id="45-differential-aip">4.5. Differential AIP</h2>
+<h2 id="differential-aip">Differential AIP</h2>
 
 <p>A differential package is an incomplete form of the AIP which contains only
 part of the original AIP it is derived from. The purpose of the differential AIP
@@ -404,23 +263,17 @@ storing the actual content of the AIP. In case of large AIPs, this allows
 adding or overriding data or metadata to an physical container
 containing parts of an AIP or the entire AIP content.</p>
 
-<p><a name="aipformat"></a></p>
-
-<h1 id="5-aip-format">5. AIP format</h1>
+<h1 id="aip-format">AIP format</h1>
 
 <p>The AIP format consists of a set of recommendations and requirements[^2]
 regarding the use of structural and preservation metadata which are
 introduced in the following.</p>
 
-<p><a name="aipspecificstructuralmetadata"></a></p>
-
-<h2 id="51-aip-specific-structural-metadata">5.1. AIP specific structural metadata</h2>
+<h2 id="aip-specific-structural-metadata">AIP specific structural metadata</h2>
 
 <p><a name="compdiv"></a></p>
 
-<p><a name="compoundvs.dividedpackagestructure"></a></p>
-
-<h3 id="511-compound-vs-divided-package-structure">5.1.1. Compound vs. divided package structure</h3>
+<h3 id="compound-vs-divided-package-structure">Compound vs. divided package structure</h3>
 
 <p>The ability to manage representations or representation parts
 separately is required because the digital data submissions can be very
@@ -508,9 +361,7 @@ of the first representation - all files are in the Portable Document Format
 
 <p><a name="parentchild"></a>aipstruct</p>
 
-<p><a name="parent-childrelationship"></a></p>
-
-<h3 id="512-parent-child-relationship">5.1.2. Parent-Child relationship</h3>
+<h3 id="parent-child-relationship">Parent-Child relationship</h3>
 
 <p>As already pointed out, the divided METS structure was introduced to support the
 physical separation of representations or representation parts and allow distributing
@@ -553,9 +404,7 @@ of structural metadata in the METS files.</p>
 
 <p><a name="metsid"></a></p>
 
-<p><a name="metsidentifier"></a></p>
-
-<h3 id="513-mets-identifier">5.1.3. METS identifier</h3>
+<h3 id="mets-identifier">METS identifier</h3>
 
 <p>Each AIP root METS document must be assigned a persistent and unique
 identifier. Possible identifier schemes are amongst others: OCLC Purls<sup id="fnref:4"><a href="#fn:4" class="footnote">2</a></sup>, CNRI
@@ -593,9 +442,7 @@ element’s <code class="language-plaintext highlighter-rouge">OBJID</code> attr
 <p>The <code class="language-plaintext highlighter-rouge">OBJID</code> attribute of the root METS is the persistent unique identifier of
 the AIP.</p>
 
-<p><a name="structuralmapofadividedmetsstructure"></a></p>
-
-<h4 id="5131-structural-map-of-a-divided-mets-structure">5.1.3.1. Structural map of a divided METS structure</h4>
+<h4 id="structural-map-of-a-divided-mets-structure">Structural map of a divided METS structure</h4>
 
 <p><a name="aip-divided-mets"></a><strong>AIP3</strong>: When an AIP uses the
 divided METS structure, i.e. the different representations have their own
@@ -621,13 +468,9 @@ corresponding <code class="language-plaintext highlighter-rouge">&lt;file&gt;</c
 <p><strong>Listing 1:</strong>
 Structural map referencing METS files of the different representations</p>
 
-<p><a name="metadatarepresentationoftheaipstructure"></a></p>
+<h3 id="metadata-representation-of-the-aip-structure">Metadata representation of the AIP structure</h3>
 
-<h3 id="514-metadata-representation-of-the-aip-structure">5.1.4. Metadata representation of the AIP structure</h3>
-
-<p><a name="childaipreferencesparentaip"></a></p>
-
-<h4 id="5141-child-aip-references-parent-aip">5.1.4.1. Child AIP references parent AIP</h4>
+<h4 id="child-aip-references-parent-aip">Child AIP references parent AIP</h4>
 
 <p>The optional reference to a parent AIP is expressed by a structural map with the
 LABEL attribute value <code class="language-plaintext highlighter-rouge">Parent</code>. Listing 2 shows an example where a UUID is used
@@ -651,9 +494,7 @@ can be set correspondingly.</p>
 <p><strong>Listing 2:</strong>
 Using a structMap to reference the parent AIP</p>
 
-<p><a name="parentaipreferenceschildaips"></a></p>
-
-<h4 id="5142-parent-aip-references-child-aips">5.1.4.2. Parent AIP references child AIPs</h4>
+<h4 id="parent-aip-references-child-aips">Parent AIP references child AIPs</h4>
 <p>The parent AIP which is referenced by child AIPs must have a structural map
 listing all child AIPs. Listing 3 shows the structural map of a parent AIP
 listing four child AIPs.</p>
@@ -691,9 +532,7 @@ listing four child AIPs.</p>
 <p><strong>Listing 3:</strong>
 Using a structMap to reference the parent AIP</p>
 
-<p><a name="aiprelevantpreservationmetadata"></a></p>
-
-<h2 id="52-aip-relevant-preservation-metadata">5.2. AIP relevant preservation metadata</h2>
+<h2 id="aip-relevant-preservation-metadata">AIP relevant preservation metadata</h2>
 
 <p>As already mentioned, PREMIS [@premis3.0-2017] is used to describe technical
 metadata of digital objects, rights metadata to define the rights status in
@@ -709,15 +548,11 @@ code parts, the prefix “premis” is omitted (default namespace is the PREMIS
 namespace<sup id="fnref:9"><a href="#fn:9" class="footnote">7</a></sup>) while the “mets” prefix is explicitly added if a relation to the
 METS file is explained.</p>
 
-<p><a name="premisobject"></a></p>
-
-<h3 id="521-premis-object">5.2.1. PREMIS object</h3>
+<h3 id="premis-object">PREMIS object</h3>
 
 <p>The PREMIS object contains technical information about a digital object.</p>
 
-<p><a name="fileformat"></a></p>
-
-<h4 id="5211-file-format">5.2.1.1. File format</h4>
+<h4 id="file-format">File format</h4>
 
 <p><a name="aip-premis-file-format"></a><strong>AIP7</strong>: The format
 element COULD be provided either using the formatRegistry or the
@@ -745,9 +580,7 @@ based on the PRONOM technical registry<sup id="fnref:11"><a href="#fn:11" class=
 <p><strong>Listing 6:</strong>
 Optionally, the format version can be provided using the <code class="language-plaintext highlighter-rouge">formatDesignation</code> element.</p>
 
-<p><a name="storage"></a></p>
-
-<h4 id="5212-storage">5.2.1.2. Storage</h4>
+<h4 id="storage">Storage</h4>
 
 <p><a name="aip-premis-storage"></a><strong>AIP11</strong>: The storage element
 COULD hold contain information about the physical location of the digital
@@ -773,9 +606,7 @@ control or for segmented AIPs).</p>
 <p><strong>Listing 9:</strong>
 Storage description</p>
 
-<p><a name="relationship"></a></p>
-
-<h4 id="5213-relationship">5.2.1.3. Relationship</h4>
+<h4 id="relationship">Relationship</h4>
 
 <p><a name="aip-premis-relationship"></a><strong>AIP12</strong>: The
 <code class="language-plaintext highlighter-rouge">relationship</code> element SHOULD be used to describe relationships of the digital
@@ -802,13 +633,9 @@ super-ordinate AIP.</p>
 <p><strong>Listing 10:</strong>
 Relationship</p>
 
-<p><a name="premisevent"></a></p>
+<h3 id="premis-event">PREMIS event</h3>
 
-<h3 id="522-premis-event">5.2.2. PREMIS event</h3>
-
-<p><a name="eventidentifier"></a></p>
-
-<h4 id="5221-event-identifier">5.2.2.1. Event identifier</h4>
+<h4 id="event-identifier">Event identifier</h4>
 
 <p><a name="aip-premis-event-id"></a><strong>AIP15</strong>: The <code class="language-plaintext highlighter-rouge">eventIdentifier</code>
 SHOULD be used to identify events, such as preservation actions, which were applied.
@@ -823,9 +650,7 @@ An example is shown in Listing 12.</p>
 <p><strong>Listing 12:</strong>
 Event identifier</p>
 
-<p><a name="linktoagent/object"></a></p>
-
-<h4 id="5222-link-to-agentobject">5.2.2.2. Link to agent/object</h4>
+<h4 id="link-to-agentobject">Link to agent/object</h4>
 
 <p><a name="aip-premis-event-agent"></a><strong>AIP16</strong>: If an event is described, the agent which caused
 the event (e.g. person, software, hardware, etc.) MUST be related to the event by means of the <code class="language-plaintext highlighter-rouge">linkingAgentIdentifier</code> element.</p>
@@ -851,9 +676,7 @@ example is shown in Listing 13.</p>
 <p><strong>Listing 13:</strong>
 Link to agent/object</p>
 
-<p><a name="migrationeventtype"></a></p>
-
-<h4 id="5223-migration-event-type">5.2.2.3. Migration event type</h4>
+<h4 id="migration-event-type">Migration event type</h4>
 
 <p><a name="aip-premis-event-type"></a><strong>AIP17</strong>: The event by which a
 resource was created SHOULD to be recorded by means of the
@@ -899,9 +722,7 @@ Migration event</p>
 <code class="language-plaintext highlighter-rouge">metadata/file.xml</code> is the result of the migration event “migration-001” and the
 event which created the source object is “ingest-001”.</p>
 
-<p><a name="premisagent"></a></p>
-
-<h3 id="523-premis-agent">5.2.3. PREMIS agent</h3>
+<h3 id="premis-agent">PREMIS agent</h3>
 
 <p><a name="aip-premis-agent"></a><strong>AIP18</strong>: Agents which are referenced in
 events must be described by means of the <code class="language-plaintext highlighter-rouge">agent</code> element.</p>
@@ -931,17 +752,13 @@ In this case, the “discovery right” is assigned to this agent.</p>
 <p><strong>Listing 15:</strong>
 Software as an agent</p>
 
-<p><a name="physicalcontainerpackaging"></a></p>
-
-<h2 id="53-physical-container-packaging">5.3. Physical Container Packaging</h2>
+<h2 id="physical-container-packaging">Physical Container Packaging</h2>
 
 <p>This part of the AIP format specification gives recommendations regarding the
 creation of the physical packaging of the logical AIP into either one or
 multiple transferable and storable entities.</p>
 
-<p><a name="namingschemeforphysicalcontainers"></a></p>
-
-<h3 id="531-naming-scheme-for-physical-containers">5.3.1. Naming scheme for physical containers</h3>
+<h3 id="naming-scheme-for-physical-containers">Naming scheme for physical containers</h3>
 
 <p>The recommended naming of phyiscal containers differentiates 4 levels which
 can be reflected in the file name:</p>
@@ -972,9 +789,7 @@ of a differential package.</p>
 examples of how the naming scheme can be applied in specific digital preservation
 scenarios related to the life-cycle of an AIP are listed in Appendix E.</p>
 
-<p><a name="identifierpart"></a></p>
-
-<h4 id="5311-identifier-part">5.3.1.1. Identifier part</h4>
+<h4 id="identifier-part">Identifier part</h4>
 
 <p>According to the requirement defined in section <a href="#metsid">5.3.1</a>
 (“METS identifier”), every AIP bears an identifier which must be recorded
@@ -1038,9 +853,7 @@ name would be:</p>
 <p>In this example, the AIP’s physical container file name only consists of the
 AIP file name ID.</p>
 
-<p><a name="versionlabel"></a></p>
-
-<h4 id="5312-version-label">5.3.1.2. Version label</h4>
+<h4 id="version-label">Version label</h4>
 
 <p><a name="aip-container-suffix"></a><strong>AIP23</strong>: A suffix COULD be
 added to the physical container file that bears information about the version of the
@@ -1057,9 +870,7 @@ follows:</p>
 of a submission could 0. Any changes applied (e.g. due to preservation measures) could
 be stored in subsequent versions.</p>
 
-<p><a name="baglabel"></a></p>
-
-<h4 id="5313-bag-label">5.3.1.3. Bag label</h4>
+<h4 id="bag-label">Bag label</h4>
 
 <p><a name="aip-container-part"></a><strong>AIP25</strong>: If an AIP is divided into
 different phyiscal container files container, a suffix COULD be added to the name
@@ -1074,9 +885,7 @@ ID as follows:</p>
 <p>where the character <code class="language-plaintext highlighter-rouge">b</code> stands for the first bag which contains the part of the
 AIP (more on the use of bags and the bagit packaging format will be described in the next section).</p>
 
-<p><a name="differentiallabel"></a></p>
-
-<h4 id="5314-differential-label">5.3.1.4. Differential label</h4>
+<h4 id="differential-label">Differential label</h4>
 
 <p><a name="aip-container-part"></a><strong>AIP26</strong>: A “differential” package contains
 files and folders which complement or override parts of a complete physical container file.
@@ -1096,9 +905,7 @@ physical container file name as follows:</p>
 <p>where the character <code class="language-plaintext highlighter-rouge">d</code> stands for the first differential physical container file which relates to
 the first bag of version 1 of the AIP.</p>
 
-<p><a name="packaging"></a></p>
-
-<h3 id="532-packaging">5.3.2. Packaging</h3>
+<h3 id="packaging">Packaging</h3>
 
 <p>Recommended formats for packaging AIPs are TAR and ZIP which are both widely used archive formats.</p>
 
@@ -1128,9 +935,7 @@ used as the packaging format, the content SHOULD be aggregated without using com
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -cf "urn+uuid+123e4567-e89b-12d3-a456-426655440000_v0_b1.tar" "urn+uuid+123e4567-e89b-12d3-a456-426655440000_v0_b1"
 </code></pre></div></div>
 
-<p><a name="bagit"></a></p>
-
-<h4 id="5321-bagit">5.3.2.1. BagIt</h4>
+<h4 id="bagit">BagIt</h4>
 
 <p>The BagIt<sup id="fnref:14"><a href="#fn:14" class="footnote">12</a></sup> format specifies a set of hierarchical file layout conventions
 for storage and transfer of arbitrary digital content. It can be used for
@@ -1192,9 +997,7 @@ referencing the child-AIP packages.</p>
 child-AIPs is used, then every child-AIP file listed in the fetch file SHOULD be
 listed in every payload manifest.</p>
 
-<p><a name="ocfl"></a></p>
-
-<h4 id="5322-ocfl">5.3.2.2. OCFL</h4>
+<h4 id="ocfl">OCFL</h4>
 
 <p>The Oxford Common File Layout (OCFL) specification<sup id="fnref:22"><a href="#fn:22" class="footnote">15</a></sup> allows describing the storage structure of an AIP’s physical container files.</p>
 
@@ -1327,13 +1130,9 @@ OCFL file listing of an AIP (packaged container file)</p>
 <p>At the time of finalizing this specification, the OCFL standard does not support the listing of packaged container files in the inventory file.
 This would allow using the inventory to document the actual content of physical container files and may follow in a future version of the AIP specification.</p>
 
-<p><a name="appendices"></a></p>
+<h1 id="appendices">Appendices</h1>
 
-<h1 id="6-appendices">6. Appendices</h1>
-
-<p><a name="appendixa-metsreferencingrepresentationmetsfiles"></a></p>
-
-<h2 id="61-appendix-a---mets-referencing-representation-mets-files">6.1. Appendix A - METS referencing representation METS files</h2>
+<h2 id="appendix-a---mets-referencing-representation-mets-files">Appendix A - METS referencing representation METS files</h2>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;fileSec&gt;</span>
   <span class="nt">&lt;fileGrp</span> <span class="na">USE=</span><span class="s">"Common Specification root"</span> <span class="na">ID=</span><span class="s">"uuid-0d4f09a8-0734-49fb-9bea-dbf6a3f5a444"</span><span class="nt">&gt;</span>
@@ -1369,9 +1168,7 @@ This would allow using the inventory to document the actual content of physical 
 <span class="nt">&lt;/structMap&gt;</span>
 </code></pre></div></div>
 
-<p><a name="appendixb–metsdescribingarepresentation"></a></p>
-
-<h2 id="62-appendix-b--mets-describing-a-representation">6.2. Appendix B – METS describing a representation</h2>
+<h2 id="appendix-b--mets-describing-a-representation">Appendix B – METS describing a representation</h2>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;mets</span> <span class="na">xmlns:ext=</span><span class="s">"ExtensionMETS"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span> <span class="na">xmlns=</span><span class="s">"http://www.loc.gov/METS/"</span> <span class="na">PROFILE=</span><span class="s">"http://www.ra.ee/METS/v01/IP.xml"</span> <span class="na">TYPE=</span><span class="s">"AIP"</span> <span class="na">OBJID=</span><span class="s">"urn:uuid:docs_mig-1"</span> <span class="na">LABEL=</span><span class="s">"METS file describing the AIP matching the OBJID."</span> <span class="na">xsi:schemaLocation=</span><span class="s">"http://www.loc.gov/METS/ ../../schemas/mets_1_11.xsd http://www.w3.org/1999/xlink ../../schemas/xlink.xsd"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;metsHdr</span> <span class="na">RECORDSTATUS=</span><span class="s">"NEW"</span> <span class="na">CREATEDATE=</span><span class="s">"2016-12-14T09:15:24"</span><span class="nt">&gt;</span>
@@ -1422,9 +1219,7 @@ This would allow using the inventory to document the actual content of physical 
 <span class="nt">&lt;/mets&gt;</span>
 </code></pre></div></div>
 
-<p><a name="appendixc-premis.xmldescribingeventsonpackagelevel"></a></p>
-
-<h2 id="63-appendix-c---premisxml-describing-events-on-package-level">6.3. Appendix C - PREMIS.xml describing events on package level</h2>
+<h2 id="appendix-c---premisxml-describing-events-on-package-level">Appendix C - PREMIS.xml describing events on package level</h2>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;premis</span> <span class="na">xmlns=</span><span class="s">"info:lc/xmlns/premis-v2"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">version=</span><span class="s">"2.0"</span> <span class="na">xsi:schemaLocation=</span><span class="s">"info:lc/xmlns/premis-v2 ../../schemas/premis-v2-2.xsd"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;object</span> <span class="na">xmlID=</span><span class="s">"uuid-187f239d-c080-4a7f-936d-b35cec4e8ef7"</span> <span class="na">xsi:type=</span><span class="s">"representation"</span><span class="nt">&gt;</span>
@@ -1463,9 +1258,7 @@ This would allow using the inventory to document the actual content of physical 
 <span class="nt">&lt;/premis&gt;</span>
 </code></pre></div></div>
 
-<p><a name="appendixd-premis.xmldescribingmigrationeventsrepresentationlevel"></a></p>
-
-<h2 id="64-appendix-d---premisxml-describing-migration-events-representation-level">6.4. Appendix D - PREMIS.xml describing migration events (representation level)</h2>
+<h2 id="appendix-d---premisxml-describing-migration-events-representation-level">Appendix D - PREMIS.xml describing migration events (representation level)</h2>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version='1.0' encoding='UTF-8'?&gt;</span>
 <span class="nt">&lt;premis</span> <span class="na">xmlns=</span><span class="s">"info:lc/xmlns/premis-v2"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">version=</span><span class="s">"2.0"</span> <span class="na">xsi:schemaLocation=</span><span class="s">"info:lc/xmlns/premis-v2 ../../schemas/premis-v2-2.xsd"</span><span class="nt">&gt;</span>
@@ -1551,13 +1344,9 @@ This would allow using the inventory to document the actual content of physical 
 <span class="nt">&lt;/premis&gt;</span>
 </code></pre></div></div>
 
-<p><a name="appendixe-namingschemeexamples"></a></p>
+<h2 id="appendix-e---naming-scheme-examples">Appendix E - Naming scheme examples</h2>
 
-<h2 id="65-appendix-e---naming-scheme-examples">6.5. Appendix E - Naming scheme examples</h2>
-
-<p><a name="migratingarepresentationtoanewversion"></a></p>
-
-<h3 id="651-migrating-a-representation-to-a-new-version">6.5.1. Migrating a representation to a new version</h3>
+<h3 id="migrating-a-representation-to-a-new-version">Migrating a representation to a new version</h3>
 
 <p>In the example shown in Figure <a href="#fig8">8</a>, a single physical container file includes metadata and two representations,
 namely representation R1 (JPEG2000) and representation R2 (PNG). Representation R1 is
@@ -1574,9 +1363,7 @@ stored redundantly.</p>
 <p><strong>Figure 8:</strong>
 Migrating a representation to a new version.</p>
 
-<p><a name="migratingarepresentationtoanewversionwithsegmentedpackages"></a></p>
-
-<h3 id="652-migrating-a-representation-to-a-new-version-with-segmented-packages">6.5.2. Migrating a representation to a new version with segmented packages</h3>
+<h3 id="migrating-a-representation-to-a-new-version-with-segmented-packages">Migrating a representation to a new version with segmented packages</h3>
 
 <p>In the example shown in Figure <a href="#fig9">9</a>, an AIP is segmented. There are two physical container with the representations
 as child packages and one physical container file as the parent package which holds the root METS
@@ -1594,9 +1381,7 @@ updated to the new version <code class="language-plaintext highlighter-rouge">ai
 <p><strong>Figure 9:</strong>
 Migrating a representation to a new version with segmented packages.</p>
 
-<p><a name="migratingarepresentationusingadifferentialpackage"></a></p>
-
-<h3 id="653-migrating-a-representation-using-a-differential-package">6.5.3. Migrating a representation using a differential package</h3>
+<h3 id="migrating-a-representation-using-a-differential-package">Migrating a representation using a differential package</h3>
 
 <p>In the example shown in Figure <a href="#fig10">10</a>, a single physical container file includes metadata and two representations,
 namely representation R1 (JPEG2000) and representation R2 (PNG). Representation R1 is
@@ -1616,149 +1401,7 @@ a new consolidated version <code class="language-plaintext highlighter-rouge">ai
 <p><strong>Figure 10:</strong>
 Migrating a representation using a differential package.</p>
 
-<h1 id="postface">Postface</h1>
-
-<h2 id="i-authors">I. Authors</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Organisation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Karin Bredenberg</td>
-      <td>National Archives of Sweden</td>
-    </tr>
-    <tr>
-      <td>Luis Faria</td>
-      <td>Keep Solutions</td>
-    </tr>
-    <tr>
-      <td>Miguel Ferreira</td>
-      <td>Keep Solutions</td>
-    </tr>
-    <tr>
-      <td>Anders Bo Nielsen</td>
-      <td>Danish National Archives</td>
-    </tr>
-    <tr>
-      <td>Jan Rörden</td>
-      <td>Austrian Institute of Technology</td>
-    </tr>
-    <tr>
-      <td>Sven Schlarb</td>
-      <td>Austrian Institute of Technology</td>
-    </tr>
-    <tr>
-      <td>Carl Wilson</td>
-      <td>Open Preservation Foundation</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="ii-revision-history">II. Revision History</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Revision No.</th>
-      <th>Date</th>
-      <th>Authors(s)</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0.1</td>
-      <td>20.09.2016</td>
-      <td>Sven Schlarb <br />Jan Rörden</td>
-      <td>First draft based on E-ARK deliverable D4.3.</td>
-    </tr>
-    <tr>
-      <td>0.2</td>
-      <td>15.10.2016</td>
-      <td>Miguel Ferreira <br />Luis Faria</td>
-      <td>Comments, Contribution</td>
-    </tr>
-    <tr>
-      <td>0.9</td>
-      <td>20.12.2016</td>
-      <td>Sven Schlarb</td>
-      <td>Provided for internal review (E-ARK deliverable D4.4)</td>
-    </tr>
-    <tr>
-      <td>0.9.1</td>
-      <td>06.01.2017</td>
-      <td>Andrew Wilson</td>
-      <td>Comments and language review</td>
-    </tr>
-    <tr>
-      <td>0.9.2</td>
-      <td>13.01.2017</td>
-      <td>Kuldar Aas</td>
-      <td>Comments</td>
-    </tr>
-    <tr>
-      <td>1.0</td>
-      <td>27.01.2017</td>
-      <td>Sven Schlarb <br />Jan Rörden</td>
-      <td>Address review comments and language; final changes.</td>
-    </tr>
-    <tr>
-      <td>2.0-DRAFT</td>
-      <td>12.12.2018</td>
-      <td>Sven Schlarb <br />Carl Wilson</td>
-      <td>Migration to markdown, review</td>
-    </tr>
-    <tr>
-      <td>2.0.0</td>
-      <td>15.05.2019</td>
-      <td>Carl Wilson <br />Sven Schlarb</td>
-      <td>Version 2.0.0</td>
-    </tr>
-    <tr>
-      <td>2.0.1</td>
-      <td>09.09.2019</td>
-      <td>Carl Wilson</td>
-      <td>Site structure and PDF layout</td>
-    </tr>
-    <tr>
-      <td>2.0.4</td>
-      <td>12.06.2020</td>
-      <td>K. Bredenberg, C.Wilson &amp; J. Kaminski</td>
-      <td>Preface text and output display update</td>
-    </tr>
-    <tr>
-      <td>2.1.0</td>
-      <td>15.10.2021</td>
-      <td>Sven Schlarb</td>
-      <td>Re-written to reflect the proposals presented in the White Paper published in Summer 2021.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="iii-acknowledgements">III Acknowledgements</h2>
-<p>The E-ARK Archival Information Package (DIP) Specification was first
-developed within the E-ARK project in 2014 – 2017. E-ARK was an EC-funded pilot
-action project in the Competitiveness and Innovation Programme 2007- 2013, Grant
-Agreement no. 620998 under the Policy Support Programme.</p>
-
-<p>The authors of this specification would like to thank all national archives,
-tool developers and other stakeholders who provided valuable knowledge about
-their requirements for information packages and feedback to this and previous
-versions of the specification.</p>
-
-<h2 id="iv-contact--feedback">IV Contact &amp; Feedback</h2>
-<p>The E-ARK AIP specification is maintained by the Digital Information LifeCycle
-Interoperability Standard Board (DILCIS Board). For further information about
-the DILCIS Board or feedback on the current document please consult the website
-http://www.dilcis.eu/ or https://github.com/dilcisboard or contact us at
-<a href="mailto:info@dilcis.eu">info@dilcis.eu</a>.</p>
-
-<h1 id="footnotes">Footnotes</h1>
+<h1 id="references">References</h1>
 <div class="footnotes">
   <ol>
     <li id="fn:1">
